@@ -19,20 +19,11 @@ public class HighLife implements RuleSet {
      * @return true if the cell should be alive in the next generation.
      */
     public boolean applyRules(boolean isAlive, int neighborCount) {
-        if(neighborCount<2){
-            return false;
-        }
-        else if(neighborCount>3 && neighborCount!=6){
-            return false;
-        }
-        else if(neighborCount==3){
-            return true;
-        }
-        else if(neighborCount==6){
+        if(neighborCount==3 || neighborCount==6 || (isAlive==true && neighborCount==2)){
             return true;
         }
         else{
-            return isAlive;
+            return false;
         }
     }
 }

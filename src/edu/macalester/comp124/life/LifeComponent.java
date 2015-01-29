@@ -111,10 +111,14 @@ public class LifeComponent extends JComponent {
             for (int y = 0; y < board.getHeight(); y++) {
                 int ypos = cellDistance(y);
                 if (board.getCell(x, y)) {
+                    //if(board.countLivingNeighbors(x,y)==2){
+                      //
+                    //}
                     g2.fillRect(xpos, ypos, CELL_SIZE, CELL_SIZE);
                 }
             }
         }
+
     }
     
     /**
